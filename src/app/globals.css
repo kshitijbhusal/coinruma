@@ -3,9 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-*{
-;
-}
 
 :root {
   --textnavs: 24px;
@@ -84,7 +81,7 @@
 }
 
 body {
-  color: yellow;
+  color: black;
 }
 
 .dark {

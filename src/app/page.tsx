@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useRef } from "react";
 import { MarkdownWrapper } from "@/lib/react-markdown";
+import Footer from "@/components/Footer.jsx";
 export default function Home() {
   // State to hold the coin name input
   const [coin, setCoin] = useState("");
@@ -77,24 +78,28 @@ export default function Home() {
               </button>
             </div>
 
-            <section className="drop-shadow-lg  text-2xl border-2 border-gray-600 p-6  text-white border-1 rounded-md bg-gray-200 backdrop-blur-md mt-6">
-              {explanation && (
-                // <MarkdownWrapper>
-
-                //   <textarea
-                //     style={{ height: "200px" }}
-                //     ref={textareaRef}
-                //     readOnly
-                //     defaultValue={explanation}
-                //     className="w-full  text-xl text-black outline-none text-base font-mediium resize-none overflow-hidden  "
-                //   ></textarea>
-                // </MarkdownWrapper>
-                <MarkdownWrapper>{explanation}</MarkdownWrapper>
-              )}
-            </section>
+            {explanation && (
+              <section className="drop-shadow-lg  text-2xl border-2 border-gray-600 p-6  text-white border-1 rounded-md bg-gray-200 backdrop-blur-md mt-6">
+                {explanation && (
+                  <MarkdownWrapper>{explanation}</MarkdownWrapper>
+                )}
+              </section>
+            )}
           </main>
         </div>
+        <Footer />
       </div>
     </>
   );
 }
+
+// <MarkdownWrapper>
+
+//   <textarea
+//     style={{ height: "200px" }}
+//     ref={textareaRef}
+//     readOnly
+//     defaultValue={explanation}
+//     className="w-full  text-xl text-black outline-none text-base font-mediium resize-none overflow-hidden  "
+//   ></textarea>
+// </MarkdownWrapper>
