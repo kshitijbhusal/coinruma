@@ -4,7 +4,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useRef } from "react";
 import { MarkdownWrapper } from "@/lib/react-markdown";
-import Footer from "@/components/Footer.jsx";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 export default function Home() {
   // State to hold the coin name input
   const [coin, setCoin] = useState("");
@@ -43,32 +45,17 @@ export default function Home() {
     <>
       <div className="h-screen min-h-fit w-screen bg-linear-to-t from-fuchsia-200 via-blue-500 to-sky-800 ">
         <div className="container px-4 mx-auto">
-          <header className=" text-white   flex justify-between items-center p-5 backdrop-blur-md">
-            <h1 className="text-2xl font-bold ">COINRUMA</h1>
-            <nav className="list-none text-2xl flex align-center justify-center gap-x-[4rem]  ">
-              <li>Home</li>
-              <li>About</li>
-              <li>Github</li>
-            </nav>
-          </header>
+          <Header />
 
           <main className=" text-white bg-gren-500 w-full ">
-            <div className="bg-rd-500  mx-auto w-fit text-center">
-              <h1 className="text-6xl font-bold py-4 leading-18">
-                Understand Any <br />
-                Crypto Project Instantly.
-              </h1>
-              <p className="text-xl mt-4 font-semibold">
-                Enter a coin name and get full breakdown powered by AI.
-              </p>
-            </div>
+            <Hero />
 
             <div className="bg-yelow-500 flex justify-center items-center gap-x-2 p-4 mt-6 ">
               <Input
                 onChange={(e) => setCoin(e.target.value)}
                 type="text"
                 placeholder="Search for a crypto project..."
-                className="w-full max-w-md bg-white text-black"
+                className="w-full max-w-md bg-white text-black uppercase"
               />
               <button
                 onClick={handleSubmit}
@@ -87,6 +74,7 @@ export default function Home() {
             )}
           </main>
         </div>
+
         <Footer />
       </div>
     </>
