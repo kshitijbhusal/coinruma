@@ -2,6 +2,8 @@
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import axios from "axios";
+import { useRef } from "react";
+import { MarkdownWrapper } from "@/lib/react-markdown";
 export default function Home() {
   // State to hold the coin name input
   const [coin, setCoin] = useState("");
@@ -26,6 +28,15 @@ export default function Home() {
       }
     }
   };
+
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+
+  if (textareaRef.current) {
+    textareaRef.current.style.height = "auto"; // Set initial height
+    textareaRef.current.style.height = textareaRef.current?.scrollHeight + "px"; // Adjust height based on content
+  }
+
+  console.log(textareaRef.current?.scrollHeight);
 
   return (
     <>
@@ -66,12 +77,19 @@ export default function Home() {
               </button>
             </div>
 
-            <section className="  p-6 h-fit text-white border-1 rounded-md  mt-6">
+            <section className="drop-shadow-lg  text-2xl border-2 border-gray-600 p-6  text-white border-1 rounded-md bg-gray-200 backdrop-blur-md mt-6">
               {explanation && (
-                <textarea
-                  defaultValue={explanation}
-                  className="w-full h-50  text-xl text-white "
-                ></textarea>
+                // <MarkdownWrapper>
+
+                //   <textarea
+                //     style={{ height: "200px" }}
+                //     ref={textareaRef}
+                //     readOnly
+                //     defaultValue={explanation}
+                //     className="w-full  text-xl text-black outline-none text-base font-mediium resize-none overflow-hidden  "
+                //   ></textarea>
+                // </MarkdownWrapper>
+                <MarkdownWrapper>{explanation}</MarkdownWrapper>
               )}
             </section>
           </main>

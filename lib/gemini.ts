@@ -1,3 +1,7 @@
+"use server";
+import axios from "axios";
+import { header } from "motion/react-client";
+
 const GEMINI_API_URL =
   "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
 
@@ -24,7 +28,15 @@ export async function getGeminiExplanation(coinName: string): Promise<string> {
     }
   );
 
-  console.log(`${GEMINI_API_URL}?key=${process.env.GEMINI_API_KEY}`);
+  // const res = await axios.post(
+  //   `${GEMINI_API_URL}?key=${process.env.GEMINI_API_KEY}`,
+  //   {
+  //     contents: [{ parts: [{ text: prompt }] }],
+  //   },
+  //   {
+  //     headers: { "Content-Type": "application/json" },
+  //   }
+  // );
 
   const data = await res.json();
 
