@@ -114,21 +114,21 @@ const InputBox = () => {
   return (
     <>
       <form
-        className="bg-rd-500 w-52  flex flex-col  items-center gap-y-4"
+        className=" w-52 flex flex-col items-center gap-y-4"
         onSubmit={handleSubmit}
       >
         <Input
           onChange={(e) => setCoin(e.target.value)}
           type="text"
           placeholder="Bitcoin, Eth, solana"
-          className="w-full h-8 max-w-md text-black bg-slate-50 text-[5px] font-normal  "
+          className="w-full h-8 max-w-md text-black bg-slate-50 text-[5px] font-normal "
         />
         {loading ? (
-          <div className=" p-4 w-12 ">
+          <div className="mt-2  ">
             <Loader />
           </div>
         ) : (
-          <button className="bg-black border-none mb-10 w-fit  px-2 py-1.25 rounded-md text-base font-semibold text-white hover:bg-slate-800 duration-300 cursor-pointer ">
+          <button className="bg-black border-none mb-10 w-fit px-2 py-1.25 rounded-md text-base font-semibold text-white hover:bg-slate-800 duration-300 cursor-pointer ">
             Explain
           </button>
         )}

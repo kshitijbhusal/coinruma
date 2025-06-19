@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+// #282c35
 const Loader = () => {
   return (
     <StyledWrapper>
-      <div className="spinner">
+      <div className="spinner " style={{ width: "30px", height: "30px" }}>
         <div />
         <div />
         <div />
@@ -18,9 +19,9 @@ const Loader = () => {
 
 const StyledWrapper = styled.div`
   .spinner {
-    width: 44px;
-    height: 44px;
-    animation: spinner-y0fdc1 2s infinite ease;
+    width: 30px;
+    height: 30px;
+    animation: spinner-y0fdc1 4s infinite ease;
     transform-style: preserve-3d;
   }
 
@@ -28,9 +29,8 @@ const StyledWrapper = styled.div`
     height: 100%;
     position: absolute;
     width: 100%;
-    border: 2px solid #282c35;
+    border: 2px solid black;
   }
-
   .spinner div:nth-of-type(1) {
     transform: translateZ(-22px) rotateY(180deg);
   }

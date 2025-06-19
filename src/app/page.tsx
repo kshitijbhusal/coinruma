@@ -1,7 +1,7 @@
 "use client";
-import { useContext } from "react";
 
 import MarkdownWrapper from "@/lib/react-markdown";
+import { lazy, useContext } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";

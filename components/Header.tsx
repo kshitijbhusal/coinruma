@@ -12,6 +12,7 @@ const Header = () => {
             className="bg-re-500 text-white mt-2"
             src="/logo.svg"
             width={100}
+            height={100}
             alt="bext"
           />
         </Link>
