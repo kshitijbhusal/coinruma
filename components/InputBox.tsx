@@ -21,8 +21,8 @@ const InputBox = () => {
 
       const explanation: any = response.data;
       setExplanation(explanation.geminiResponse || "No response from Gemini");
+      localStorage.setItem("explanation", JSON.stringify(explanation));
       setLoading(false);
-      console.log(explanation.geminiResponse);
       // Use this in state/display
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -45,7 +45,7 @@ const InputBox = () => {
           className="w-full h-8 max-w-md text-black bg-slate-50 text-[5px] font-normal  "
         />
         {loading ? (
-          <div className=" p-4">
+          <div className=" p-4 w-12 ">
             <Loader />
           </div>
         ) : (

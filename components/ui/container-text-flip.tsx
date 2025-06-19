@@ -19,7 +19,7 @@ export interface ContainerTextFlipProps {
 }
 
 export function ContainerTextFlip({
-  words = ["STEEZCODES", "KSHITIJ BHUSAL"],
+  words = ["KSHITIJ BHUSAL", "STEEZCODES"],
   interval = 3000,
   className,
   textClassName,
@@ -54,13 +54,13 @@ export function ContainerTextFlip({
   }, [words, interval]);
 
   return (
-    <motion.p
+    <motion.span
       layout
       layoutId={`words-here-${id}`}
       animate={{ width }}
       transition={{ duration: animationDuration / 2000 }}
       className={cn(
-        "relative inline-block rounded-lg pt-1 pb-1 text-center text-base font-bold text-black md:text-md dark:text-white",
+        "relative inline-block rounded-lg pt-1 pb-1 text-center text-xs font-bold text-black md:text-md dark:text-white",
         "[background: linear-gradient(to bottom, #f3f4f6, #e5e7eb)]",
         "shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]",
         "dark:[background:linear-gradient(to_bottom,#374151,#1f2937)]",
@@ -99,7 +99,7 @@ export function ContainerTextFlip({
           ))}
         </motion.div>
       </motion.div>
-    </motion.p>
+    </motion.span>
   );
 }
 

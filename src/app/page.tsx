@@ -1,6 +1,6 @@
 "use client";
-import { useContext, useState } from "react";
-import { useRef } from "react";
+import { useContext, useEffect, useState } from "react";
+
 import MarkdownWrapper from "@/lib/react-markdown";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -8,16 +8,7 @@ import Hero from "@/components/Hero";
 import InputBox from "@/components/InputBox";
 import { GeminiContext } from "../contexts/GeminiContext";
 export default function Home() {
-  const [coin, setCoin] = useState("");
-
   const { explanation } = useContext(GeminiContext);
-
-  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-
-  if (textareaRef.current) {
-    textareaRef.current.style.height = "auto"; // Set initial height
-    textareaRef.current.style.height = textareaRef.current?.scrollHeight + "px"; // Adjust height based on content
-  }
 
   return (
     <>
@@ -33,12 +24,10 @@ export default function Home() {
             </div>
 
             {explanation && (
-              <section className="drop-shadow-lg border-gray-600   p-6 border-1  rounded-md bg-gray-200 backdrop-blur-md mt-6">
-                <p className="">
-                  {explanation && (
-                    <MarkdownWrapper>{explanation}</MarkdownWrapper>
-                  )}
-                </p>
+              <section className="drop-shadow-lg border-gray-600   py-6 px-10 border-1  rounded-md bg-gray-200 backdrop-blur-md mt-6">
+                {explanation && (
+                  <MarkdownWrapper>{explanation}</MarkdownWrapper>
+                )}
               </section>
             )}
           </main>
