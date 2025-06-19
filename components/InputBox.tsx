@@ -11,20 +11,26 @@ const InputBox = () => {
 
   const { setExplanation } = useContext(GeminiContext);
 
-  const handleSubmit = async (e: any): Promise<void> => {
+  interface CoinExplanationResponse {
+    geminiResponse?: string;
+    [key: string]: any;
+  }
+
+  interface HandleSubmitEvent extends React.FormEvent<HTMLFormElement> {}
+
+  const handleSubmit = async (e: HandleSubmitEvent): Promise<void> => {
     try {
       e.preventDefault();
       setLoading(true);
-      const response = await axios.post<{ explanation: any }>("/api/coin", {
-        coinName: coin, // assuming `coin` is defined in your component state
+      const response = await axios.post<CoinExplanationResponse>("/api/coin", {
+        coinName: coin,
       });
 
-      const explanation: any = response.data;
+      const explanation: CoinExplanationResponse = response.data;
       setExplanation(explanation.geminiResponse || "No response from Gemini");
       localStorage.setItem("explanation", JSON.stringify(explanation));
       setLoading(false);
-      // Use this in state/display
-    } catch (error) {
+    } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         console.error("Axios error:", error.response?.data || error.message);
       } else {

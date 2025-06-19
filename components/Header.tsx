@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { Github } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <>
       <header className=" text-white     flex justify-between items-center p-2 backdrop-blur-md">
         <Link href="/">
-          <img
+          <Image
             className="bg-re-500 text-white mt-2"
             src="/logo.svg"
             width={100}

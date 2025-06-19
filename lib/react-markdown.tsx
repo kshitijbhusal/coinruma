@@ -1,6 +1,5 @@
 "use client";
 import React, { memo } from "react";
-import { createRoot } from "react-dom/client";
 import Markdown from "react-markdown";
 
 const MarkdownWrapper = ({ children }: { children: string }) => (

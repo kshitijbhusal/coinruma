@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import MarkdownWrapper from "@/lib/react-markdown";
 import Footer from "@/components/Footer";
