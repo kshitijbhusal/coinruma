@@ -13,7 +13,7 @@ const InputBox = () => {
 
   interface CoinExplanationResponse {
     geminiResponse?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   interface HandleSubmitEvent extends React.FormEvent<HTMLFormElement> {}
