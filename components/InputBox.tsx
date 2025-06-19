@@ -35,7 +35,7 @@ const InputBox = () => {
   return (
     <>
       <form
-        className="bg-rd-500 w-52  flex flex-col  items-center gap-y-2"
+        className="bg-rd-500 w-52  flex flex-col  items-center gap-y-4"
         onSubmit={handleSubmit}
       >
         <Input

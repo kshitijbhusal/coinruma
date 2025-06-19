@@ -12,8 +12,11 @@ const Hero = () => {
           Project Instantly
           <span className="text-black animate-bounce  ">.</span>
         </h1>
-        <p className="text-lg mt-2 font-semibold">
-          Enter a coin name and get full breakdown powered by AI.
+        <p className="text-lg mt-2 font-semibold text-white ">
+          Enter a coin name and get full breakdown{" "}
+          <span className="text-black/90 hover:underline animate-3s ">
+            powered by AI.
+          </span>
         </p>
       </div>
     </>

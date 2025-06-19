@@ -1,9 +1,7 @@
 "use client";
-import { Input } from "@/components/ui/input";
 import { useContext, useState } from "react";
-import axios from "axios";
 import { useRef } from "react";
-import { MarkdownWrapper } from "@/lib/react-markdown";
+import MarkdownWrapper from "@/lib/react-markdown";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -30,7 +28,7 @@ export default function Home() {
           <main className=" text-white bg-gren-500 w-full ">
             <Hero />
 
-            <div className="bg-yelow-500 flex justify-center items-center gap-x-2 p-4 mt-6 ">
+            <div className="bg-yelow-500 flex justify-center items-center gap-x-2 p-4 mt-10 ">
               <InputBox />
             </div>
 
