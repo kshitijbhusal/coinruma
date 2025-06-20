@@ -18,7 +18,7 @@ const Header = () => {
         </Link>
         <nav className="list-none  flex align-center justify-center items-center gap-x-2 md:gap-x-[4rem]  ">
           <Link
-            className="px-1 py-0.5  rounded-md hover:bg-gray-300/20 text base md:text-lg "
+            className="px-1 py-0.5  rounded-md hover:bg-gray-300/20 text-base md:text-lg "
             href="/"
           >
             HOME

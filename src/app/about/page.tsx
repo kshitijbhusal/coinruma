@@ -4,34 +4,30 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="h-fit min-h-fit px-10 bg-linear-to-t from-fuchsia-200 via-blue-500 to-sky-800 flex flex-col justify-between ">
-        <div className="h-fit min-h-fit px-10 bg-linear-to-t from-fuchsia-200 via-blue-500 to-sky-800 flex flex-col justify-between ">
-          <div className="container px-4 mx-auto">
-            <Header />
-            <section className="bg-rd-500 mt-16 leading-6 ">
-              <div>
-                <h1 className="text-4xl font-bold text-white">
-                  About CoinRuma
-                </h1>
-                <br />
-                <h2 className="text-2xl font-semibold ">
-                  Your AI-Powered Guide to the World of Crypto
-                </h2>
-                <p className="text-base font-medium">
-                  Welcome to CoinRuma, your ultimate companion for effortlessly
-                  navigating the often-intimidating landscape of cryptocurrency
-                  and blockchain technology. In a world brimming with complex
-                  jargon and rapidly evolving innovations, CoinRuma stands out
-                  as a beacon of clarity, designed to make understanding any
-                  crypto project truly simple and accessible.
-                </p>
-                <br />
-              </div>
+      <div className="h-fit min-h-fit px-10 bg-linear-to-t text-slate-900 from-fuchsia-200 via-blue-500 to-sky-500 flex flex-col justify-between ">
+        <Header />
+        <div className="h-fit min-h-fit   ">
+          <div>
+            <section className=" mt-16 leading-6 ">
+              <h1 className="text-4xl font-bold ">About CoinRuma</h1>
+              <br />
+              <h2 className="text-2xl font-semibold ">
+                Your AI-Powered Guide to the World of Crypto
+              </h2>
+              <p className="text-base font-medium">
+                Welcome to CoinRuma, your ultimate companion for effortlessly
+                navigating the often-intimidating landscape of cryptocurrency
+                and blockchain technology. In a world brimming with complex
+                jargon and rapidly evolving innovations, CoinRuma stands out as
+                a beacon of clarity, designed to make understanding any crypto
+                project truly simple and accessible.
+              </p>
+              <br />
             </section>
           </div>
         </div>
-        <div className="h-screen min-h-fit px-10  bg-linear-to-t from-fuchsia-200 via-sky-100 to-fuchsia-200 flex flex-col justify-between  ">
-          <div className="container px-4 mx-auto">
+        <div className="h-screen min-h-fit flex flex-col justify-between  ">
+          <div className="container  mx-auto">
             <h2 className="text-2xl font-semibold">Our Mission</h2>
             <p className="text-base font-medium">
               Our mission at CoinRuma is to democratize knowledge about digital
