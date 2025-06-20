@@ -5,6 +5,7 @@ const page = () => {
   return (
     <>
       <div className="h-fit min-h-fit px-10 bg-linear-to-t from-fuchsia-200 via-blue-500 to-sky-800 flex flex-col justify-between ">
+      <div className="h-fit min-h-fit px-10 bg-linear-to-t from-fuchsia-200 via-blue-500 to-sky-800 flex flex-col justify-between ">
         <div className="container px-4 mx-auto">
           <Header />
           <section className="bg-rd-500 mt-16 leading-6 ">
