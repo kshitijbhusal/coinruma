@@ -121,10 +121,10 @@ const InputBox = () => {
           onChange={(e) => setCoin(e.target.value)}
           type="text"
           placeholder="Bitcoin, Eth, solana"
-          className="w-full h-8 max-w-md text-black bg-slate-50 text-[5px] font-normal "
+          className="w-full h-8 max-w-md text-black bg-slate-50 md:text-base font-semibold "
         />
         {loading ? (
-          <div className="mt-2  ">
+          <div className="my-2  ">
             <Loader />
           </div>
         ) : (
